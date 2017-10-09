@@ -1,4 +1,4 @@
 # Site references
 
-* [heinrichlaw.com](heinrichlaw.com)
+* [heinrichlaw.com](http://heinrichlaw.com)
 
