@@ -9,9 +9,12 @@ module.exports = function(config) {
 
   config.set({
     basePath: '',
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine','mocha'],
 
     plugins: [
+      require('should'),
+      require('karma-mocha'),
+      require('karma-mocha-reporter'),
       require('karma-jasmine'),
       require('karma-chrome-launcher'),
       require('karma-jasmine-html-reporter')
@@ -85,7 +88,7 @@ module.exports = function(config) {
 
     exclude: [],
     preprocessors: {},
-    reporters: ['progress', 'kjhtml'],
+    reporters: ['progress', 'kjhtml', 'mocha'],
 
     port: 9876,
     colors: true,

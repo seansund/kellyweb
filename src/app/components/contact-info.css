@@ -1,0 +1,266 @@
+.contact-info-wrap {
+    background: #01417d;
+    overflow: hidden
+}
+
+.contact-info-contatiner {
+    position: relative
+}
+
+.contact-info {
+    width: 36.07306%;
+    float: left;
+    margin-right: -100%;
+    margin-left: 0%;
+    clear: none;
+    padding-bottom: 45px
+}
+
+@media (max-width: 750px) {
+    .contact-info {
+        width: 100%;
+        padding-bottom: 0
+    }
+}
+
+.contact-info .office {
+    font-family: "Raleway", sans-serif;
+    padding-left: 6%
+}
+
+@media (max-width: 1150px) {
+    .contact-info .office {
+        padding-left: 0
+    }
+}
+
+@media (max-width: 1150px) {
+    .contact-info .office {
+        margin: 0 auto;
+        display: table;
+        padding-left: 0;
+        padding-bottom: 0
+    }
+}
+
+.contact-info .office p .office-title {
+    color: #ffffff;
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 44px 1px 12px 59px;
+    display: inline-block
+}
+
+@media (max-width: 1150px) {
+    .contact-info .office p .office-title {
+        padding-left: 0;
+        font-size: 26px
+    }
+}
+
+@media (max-width: 650px) {
+    .contact-info .office p .office-title {
+        font-size: 22px;
+        padding: 0;
+        line-height: 1.5
+    }
+}
+
+.contact-info .office p .office-address,
+.contact-info .office p .office-phone {
+    color: #ffffff;
+    font-weight: 400;
+    line-height: 1.6;
+    display: block;
+    padding: 11px 1px 2px 59px;
+    letter-spacing: 0px
+}
+
+@media (max-width: 1150px) {
+    .contact-info .office p .office-address,
+    .contact-info .office p .office-phone {
+        padding-left: 0
+    }
+}
+
+@media (max-width: 750px) {
+    .contact-info .office p .office-address,
+    .contact-info .office p .office-phone {
+        padding: 2px 1px 0px 0px;
+        line-height: 1.5
+    }
+}
+
+.contact-info .office p .office-address .office-locality,
+.contact-info .office p .office-phone .office-locality {
+    padding: 4px 0 0px 0;
+    display: inline-block
+}
+
+.contact-info .office p .office-phone {
+    padding-top: 0px;
+    padding-bottom: 0px
+}
+
+.contact-info .office p .office-phone a {
+    color: #fff;
+    text-decoration: none
+}
+
+.contact-info .office a {
+    color: #1c99db;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 33px 0 0 58px;
+    display: inline-block;
+    margin: 0;
+    text-transform: capitalize
+}
+
+@media (max-width: 1150px) {
+    .contact-info .office a {
+        padding-left: 0
+    }
+}
+
+@media (max-width: 650px) {
+    .contact-info .office a {
+        padding: 0
+    }
+}
+
+.contact-info .office a:hover,
+.contact-info .office a.current,
+.contact-info .office a:focus,
+.contact-info .office a:active {
+    text-decoration: none
+}
+
+.review,
+.reviewus {
+    clear: both
+}
+
+.review a,
+.reviewus a {
+    color: #fff;
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    background: #1c99db;
+    max-width: 292px;
+    display: block;
+    width: 100%;
+    padding: 27px 39px 28px 26px;
+    text-align: center;
+    letter-spacing: 1.4px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin: 33px 0 6.5% 21%
+}
+
+@media (max-width: 1150px) {
+    .review a,
+    .reviewus a {
+        margin: 20px auto
+    }
+}
+
+@media (max-width: 850px) {
+    .review a,
+    .reviewus a {
+        max-width: 242px;
+        font-size: 17px;
+        display: block;
+        width: 100%;
+        padding: 15px 6px 15px 6px
+    }
+}
+
+@media (max-width: 500px) {
+    .review a,
+    .reviewus a {
+        max-width: 306px;
+        font-size: 16px
+    }
+}
+
+.review a:hover,
+.review a.current,
+.review a:focus,
+.review a:active,
+.reviewus a:hover,
+.reviewus a.current,
+.reviewus a:focus,
+.reviewus a:active {
+    background: #59b4e4
+}
+
+.reviewus {
+    clear: both
+}
+
+.reviewus a {
+    color: #fff;
+    font-size: 18px;
+    font-family: "Raleway", sans-serif;
+    font-weight: 700;
+    text-transform: uppercase;
+    background: #1c99db;
+    max-width: 225px;
+    display: block;
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    letter-spacing: 1.4px;
+    border-radius: 7px;
+    text-decoration: none;
+    margin: 33px 0 6.5% 21%
+}
+
+@media (max-width: 1150px) {
+    .reviewus a {
+        margin: 20px auto
+    }
+}
+
+@media (max-width: 850px) {
+    .reviewus a {
+        max-width: 242px;
+        font-size: 17px;
+        display: block;
+        width: 100%;
+        padding: 15px 6px 15px 6px
+    }
+}
+
+@media (max-width: 500px) {
+    .reviewus a {
+        max-width: 306px;
+        font-size: 16px
+    }
+}
+
+.reviewus a:hover,
+.reviewus a.current,
+.reviewus a:focus,
+.reviewus a:active {
+    background: #59b4e4
+}
+
+.map-image {
+    width: 61.64384%;
+    float: right;
+    margin-left: 0;
+    margin-right: 0;
+    clear: none;
+    padding: 76px 0 0 0
+}
+
+@media (max-width: 750px) {
+    .map-image {
+        display: none
+    }
+}

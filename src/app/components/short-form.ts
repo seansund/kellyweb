@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
+  selector: 'short-form-wrap',
   moduleId: module.id,
-  templateUrl: 'app.component.html',
+  templateUrl: 'short-form.html',
   styleUrls: ['site.css', 'animate.css']
 })
-export class AppComponent  { 
-  name = 'Angular'; 
+export class ShortFormComponent {
 }

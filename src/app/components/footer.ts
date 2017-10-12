@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
+  selector: 'footer-page-wrap',
   moduleId: module.id,
-  templateUrl: 'app.component.html',
+  templateUrl: 'footer.html',
   styleUrls: ['site.css', 'animate.css']
 })
-export class AppComponent  { 
-  name = 'Angular'; 
+export class FooterComponent {
 }

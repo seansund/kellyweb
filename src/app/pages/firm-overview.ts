@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
+  selector: 'firm-overview',
   moduleId: module.id,
-  templateUrl: 'app.component.html',
+  templateUrl: 'firm-overview.html',
   styleUrls: ['site.css', 'animate.css']
 })
-export class AppComponent  { 
-  name = 'Angular'; 
+export class FirmOverviewComponent {
 }
