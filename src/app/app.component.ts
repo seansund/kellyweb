@@ -1,11 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'my-app',
-  moduleId: module.id,
-  templateUrl: 'app.component.html',
-  styleUrls: ['site.css', 'animate.css']
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
-export class AppComponent  { 
-  name = 'Angular'; 
+export class AppComponent {
+  title = 'app';
 }

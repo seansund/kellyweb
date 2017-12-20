@@ -1,0 +1,3 @@
+applications:
+- name: kellysundberglaw
+  buildpack: staticfile_buildpack
