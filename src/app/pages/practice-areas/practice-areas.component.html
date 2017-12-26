@@ -1,0 +1,30 @@
+<app-practice-menu></app-practice-menu>
+<div [ngSwitch]="selected">
+  <div *ngSwitchCase="'child-custody'">
+    Stuff about child custody
+  </div>
+  <div *ngSwitchCase="'child-support'">
+    Stuff about child support
+  </div>
+  <div *ngSwitchCase="'modifications'">
+    Stuff about modifications
+  </div>
+  <div *ngSwitchCase="'enforcement'">
+    Stuff about enforcement
+  </div>
+  <div *ngSwitchCase="'adoption'">
+    Stuff about adoption
+  </div>
+  <div *ngSwitchCase="'guardianship'">
+    Stuff about guardianship
+  </div>
+  <div *ngSwitchCase="'probate'">
+    Stuff about probate
+  </div>
+  <div *ngSwitchCase="'wills-trusts'">
+    Stuff about wills &amp; trusts
+  </div>
+  <div *ngSwitchDefault>
+    Stuff about divorce
+  </div>
+</div>

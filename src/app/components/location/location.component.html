@@ -1,0 +1,31 @@
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-md-7'>
+      <agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" (centerChange)="centerChange">
+        <agm-marker [latitude]="lat" [longitude]="lng">
+        </agm-marker>
+      </agm-map>
+    </div>
+    <div class='col-md-5'>
+      <div itemref="attorneyProfile attorney-list" itemscope="itemscope" itemtype="http://schema.org/Attorney">
+        <meta itemprop="name" content="Kelly Sundberg, PC">
+        <meta itemprop="legalName" content="Kelly Sundberg, PC">
+        <div itemprop="location" itemscope="itemscope" itemtype="http://schema.org/Place">
+          <strong>Office Address</strong>
+          <p>
+            <span itemprop="address" itemscope="itemscope" itemtype="http://schema.org/PostalAddress">
+              <span itemprop="streetAddress">407 W. Liberty Ave</span><br />
+              <span itemprop="addressLocality">Round Rock</span>
+              <span itemprop="addressRegion">TX</span>
+              <span itemprop="postalCode">78664</span>
+            </span>
+          </p>
+          <p>
+            <span><span>Phone:</span> <span itemprop="telephone">512-246-3995</span></span><br />
+            <span><span>Fax:</span> <span itemprop="faxNumber">512-246-7776</span></span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
