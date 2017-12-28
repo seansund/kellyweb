@@ -2,4 +2,4 @@ applications:
 - name: kellysundberglaw
   buildpack: staticfile_buildpack
   memory: 64M
-  disk_quota: 128M
+  disk_quota: 512M
