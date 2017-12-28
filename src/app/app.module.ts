@@ -1,5 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import {FormsModule} from "@angular/forms";
 
 import {AgmCoreModule} from "@agm/core";
 
@@ -37,7 +38,8 @@ import { PracticeAreasComponent } from './pages/practice-areas/practice-areas.co
     AgmCoreModule.forRoot({
       apiKey: 'AIzaSyD4Niun-O9mB0zhDWWGSrbYCQX19QKMvX0'
     }),
-    NgbModule.forRoot()
+    NgbModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
