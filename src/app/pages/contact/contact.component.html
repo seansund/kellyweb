@@ -5,28 +5,44 @@
 <p>
   To speak with an attorney about your situation call 512-246-3995. You can also fill out the online form below:
 </p>
-<div>
-  <label><span style="display: none;">Name:</span><br />
-    <input [(ngModel)]="contact.name" placeholder="Name">
-  </label>
-</div>
-<div>
-  <label><span style="display: none;"><strong>Email address:</strong></span><br />
-    <input [(ngModel)]="contact.emailAddress" placeholder="Email address">
-  </label>
-</div>
-<div>
-  <label><span style="display: none;">State:</span><br />
-    <input [(ngModel)]="contact.state" placeholder="State">
-  </label>
-</div>
-<div>
-  <label><span style="display: none;">Zip:</span><br />
-    <input [(ngModel)]="contact.zip" placeholder="Zip">
-  </label>
-</div>
-<div>
-  <label><span style="display: none;">Phone:</span><br />
-    <input [(ngModel)]="contact.phone" placeholder="Phone">
-  </label>
-</div>
+<form [formGroup]="contactForm">
+  <div [ngClass]="{
+    'has-danger': nameControl.invalid && nameControl.dirty,
+    'has-success': nameControl.valid && nameControl.dirty}">
+    <label><span [ngClass]="{'hidden': !nameControl.value, 'shown': !!nameControl.value}">Name</span><br />
+      <input class="form-control" type="text" formControlName="name" placeholder="Name">
+    </label>
+  </div>
+  <div [ngClass]="{
+    'has-danger': emailControl.invalid && emailControl.dirty,
+    'has-success': emailControl.valid && emailControl.dirty}">
+    <label><span [ngClass]="{'hidden': !emailControl.value, 'shown': !!emailControl.value}"><strong>Email address</strong></span><br />
+      <input class="form-control" type="email" formControlName="emailAddress" placeholder="Email address">
+    </label>
+  </div>
+  <div  [ngClass]="{
+    'has-danger': stateControl.invalid && stateControl.dirty,
+    'has-success': stateControl.valid && stateControl.dirty}">
+    <label><span [ngClass]="{'hidden': !stateControl.value, 'shown': !!stateControl.value}">State</span><br />
+      <select class="form-control" formControlName="state" placeholder="State">
+        <option value="">Select a state</option>
+        <option *ngFor="let state of states" [value]="state.code">{{state.name}}</option>
+      </select>
+    </label>
+  </div>
+  <div  [ngClass]="{
+    'has-danger': zipControl.invalid && zipControl.dirty,
+    'has-success': zipControl.valid && zipControl.dirty}">
+    <label><span [ngClass]="{'hidden': !zipControl.value, 'shown': !!zipControl.value}">Zip</span><br />
+      <input class="form-control" type="number" formControlName="zip" placeholder="Zip">
+    </label>
+  </div>
+  <div  [ngClass]="{
+    'has-danger': phoneControl.invalid && phoneControl.dirty,
+    'has-success': phoneControl.valid && phoneControl.dirty}">
+    <label><span [ngClass]="{'hidden': !phoneControl.value, 'shown': !!phoneControl.value}">Phone</span><br />
+      <input class="form-control" type="tel" formControlName="phone" placeholder="Phone">
+    </label>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>

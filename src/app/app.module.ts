@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from "@angular/forms";
+import { ReactiveFormsModule } from '@angular/forms';
 
 import {AgmCoreModule} from "@agm/core";
 
@@ -17,6 +18,8 @@ import { ContactComponent } from './pages/contact/contact.component';
 import { FirmOverviewComponent } from './pages/firm-overview/firm-overview.component';
 import { PracticeMenuComponent } from './components/practice-menu/practice-menu.component';
 import { PracticeAreasComponent } from './pages/practice-areas/practice-areas.component';
+
+import { StateService } from "./services/state.service";
 
 
 @NgModule({
@@ -39,9 +42,10 @@ import { PracticeAreasComponent } from './pages/practice-areas/practice-areas.co
       apiKey: 'AIzaSyD4Niun-O9mB0zhDWWGSrbYCQX19QKMvX0'
     }),
     NgbModule.forRoot(),
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [StateService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
