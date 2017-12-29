@@ -1,33 +1,21 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Contact } from "../../models/Contact";
-
-import {State} from "../../models/State";
-import {StateService} from "../../services/state.service";
+import {FormControl, FormGroup, Validators} from "@angular/forms";
 
 @Component({
-  selector: 'app-contact',
-  templateUrl: './contact.component.html',
-  styleUrls: ['./contact.component.less']
+  selector: 'app-mini-contact',
+  templateUrl: './mini-contact.component.html',
+  styleUrls: ['./mini-contact.component.less']
 })
-export class ContactComponent implements OnInit {
-  states: State[];
-
+export class MiniContactComponent implements OnInit {
   contactForm: FormGroup;
   nameControl: FormControl;
   emailControl: FormControl;
-  stateControl: FormControl;
-  zipControl: FormControl;
   phoneControl: FormControl;
   descriptionControl: FormControl;
 
-  constructor(private stateService: StateService) { }
+  constructor() { }
 
   ngOnInit() {
-    this.stateService.getStates().subscribe(states => {
-      this.states = states;
-    });
-
     this.contactForm = new FormGroup({
       'name': this.nameControl = new FormControl('', {
         validators: Validators.minLength(2),
@@ -38,14 +26,6 @@ export class ContactComponent implements OnInit {
           Validators.required,
           Validators.pattern("[^ @]*@[^ @]*")
         ], updateOn: "change"
-      }),
-      'state': this.stateControl = new FormControl('', {
-        validators: Validators.minLength(1),
-        updateOn: "change"
-      }),
-      'zip': this.zipControl = new FormControl('', {
-        validators: Validators.pattern('[0-9]{5}|[0-9]{9}'),
-        updateOn: "change"
       }),
       'phone': this.phoneControl = new FormControl('', {
         validators: [

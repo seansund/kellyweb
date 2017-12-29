@@ -4,7 +4,5 @@ export class Contact {
   state: string = "";
   zip: string;
   phone: string;
-  preferPhone: boolean;
-  preferEmail: boolean;
   description: string;
 }

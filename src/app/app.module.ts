@@ -20,6 +20,7 @@ import { PracticeMenuComponent } from './components/practice-menu/practice-menu.
 import { PracticeAreasComponent } from './pages/practice-areas/practice-areas.component';
 
 import { StateService } from "./services/state.service";
+import { MiniContactComponent } from './components/mini-contact/mini-contact.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { StateService } from "./services/state.service";
     ContactComponent,
     FirmOverviewComponent,
     PracticeMenuComponent,
-    PracticeAreasComponent
+    PracticeAreasComponent,
+    MiniContactComponent
   ],
   imports: [
     BrowserModule,

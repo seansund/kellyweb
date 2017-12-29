@@ -1,0 +1,47 @@
+<div class="mini-contact-container">
+  <div style="text-align: center;">
+  <h2>Consult with an experienced attorney</h2>
+  </div>
+  <form [formGroup]="contactForm">
+    <div class="container-fluid">
+      <div class="row justify-content-md-center">
+    <div class="col-md-3">
+      <fieldset>
+        <div [ngClass]="{
+    'has-danger': nameControl.invalid && nameControl.dirty,
+    'has-success': nameControl.valid && nameControl.dirty}">
+          <label><span [ngClass]="{'hidden': !nameControl.value, 'shown': !!nameControl.value}">Name</span>
+            <input class="form-control" type="text" formControlName="name" placeholder="Name">
+          </label>
+        </div>
+        <div [ngClass]="{
+    'has-danger': emailControl.invalid && emailControl.dirty,
+    'has-success': emailControl.valid && emailControl.dirty}">
+          <label><span [ngClass]="{'hidden': !emailControl.value, 'shown': !!emailControl.value}"><strong>Email address</strong></span>
+            <input class="form-control" type="email" formControlName="emailAddress" placeholder="Email address" style="font-weight: bold;">
+          </label>
+        </div>
+        <div [ngClass]="{
+    'has-danger': phoneControl.invalid && phoneControl.dirty,
+    'has-success': phoneControl.valid && phoneControl.dirty}">
+          <label><span [ngClass]="{'hidden': !phoneControl.value, 'shown': !!phoneControl.value}"><strong>Phone</strong></span>
+            <input class="form-control" type="tel" formControlName="phone" placeholder="Phone" style="font-weight: bold;">
+          </label>
+        </div>
+        <label style="padding-top: 10px;"><input type="checkbox" formControlName="disclaimer"> <strong>I have read the disclaimer.</strong></label>
+      </fieldset>
+    </div>
+    <div class="col-md-3">
+      <fieldset>
+        <div>
+          <label><span [ngClass]="{'hidden': !descriptionControl.value, 'shown': !!descriptionControl.value}">Brief description of your legal issue</span>
+            <textarea class="form-control" formControlName="description" placeholder="Brief description of your legal issue" rows="7"></textarea>
+          </label>
+        </div>
+      </fieldset>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+    </div>
+    </div>
+    </form>
+</div>
