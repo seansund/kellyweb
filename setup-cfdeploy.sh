@@ -1,3 +1,4 @@
+#!/bin/bash
 rm -rf cf-dist
 mkdir cf-dist
 cp -R config/* cf-dist
