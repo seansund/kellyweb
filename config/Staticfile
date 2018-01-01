@@ -1,2 +1,2 @@
-root: .
+root: dist
 location_include: includes/*.conf

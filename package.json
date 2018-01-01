@@ -5,9 +5,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod && cp -R config/* dist",
+    "build": "ng build --prod && ./setup-cfdeploy.sh",
     "build:gh": "ng build --prod --base-href \"/kellyweb/\"",
-    "push": "cd dist && bx cf push",
+    "push": "cd cf-dist && bx cf push",
     "deploy": "npm run build && npm run push",
     "deploy:gh": "npm run build:gh && ngh",
     "test": "ng test",
