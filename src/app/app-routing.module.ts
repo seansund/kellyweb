@@ -14,7 +14,8 @@ const routes: Routes = [
   {path: 'staff', component: StaffComponent},
   {path: 'contact', component: ContactComponent},
   {path: 'practice-area', redirectTo: '/practice-area/divorce', pathMatch: 'full'},
-  {path: 'practice-area/:id', component: PracticeAreasComponent}
+  {path: 'practice-area/:id', component: PracticeAreasComponent},
+  {path: '**', redirectTo: '/home'}
 ];
 
 @NgModule({
