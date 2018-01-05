@@ -1,6 +1,29 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { PracticeAreasComponent } from './practice-areas.component';
+import {Component} from "@angular/core";
+import {ActivatedRoute} from "@angular/router";
+
+@Component({
+  selector: 'app-practice-menu',
+  template: ''
+})
+class PracticeMenuMock {
+}
+
+@Component({
+  selector: 'app-location',
+  template: ''
+})
+class LocationMock {
+}
+
+@Component({
+  selector: 'app-mini-contact',
+  template: ''
+})
+class MiniContactMock {
+}
 
 describe('PracticeAreasComponent', () => {
   let component: PracticeAreasComponent;
@@ -8,7 +31,15 @@ describe('PracticeAreasComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PracticeAreasComponent ]
+      declarations: [
+        PracticeAreasComponent,
+        PracticeMenuMock,
+        LocationMock,
+        MiniContactMock
+      ],
+      providers: [
+        {provide: ActivatedRoute, useValue: {}}
+      ]
     })
     .compileComponents();
   }));

@@ -1,14 +1,19 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { MiniContactComponent } from './mini-contact.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
-describe('MiniContactComponent', () => {
+describe('MiniContactMock', () => {
   let component: MiniContactComponent;
   let fixture: ComponentFixture<MiniContactComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MiniContactComponent ]
+      declarations: [ MiniContactComponent ],
+      imports: [
+        FormsModule,
+        ReactiveFormsModule
+      ]
     })
     .compileComponents();
   }));
