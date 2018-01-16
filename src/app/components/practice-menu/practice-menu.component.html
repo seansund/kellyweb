@@ -1,5 +1,5 @@
 <div class="practice-areas">
-  <a class="btn btn-default btn-lg practice-area" *ngFor="let practiceArea of practiceAreas"
+  <a class="btn btn-default btn-sm practice-area" *ngFor="let practiceArea of practiceAreas"
     routerLink="{{this.baseLink + practiceArea.link}}" routerLinkActive="is-active"><span *ngIf="practiceArea.icon"
       class="{{practiceArea.icon}}" aria-hidden="true"></span> {{practiceArea.label}}</a>
 </div>

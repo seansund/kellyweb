@@ -2,26 +2,30 @@
 
 header {
   background-color: @primary-bg;
-  padding: 10px 5px 20px 5px;
+  padding-left: 5px;
+  padding-right: 5px;
   overflow: auto;
 }
 .brand {
   float: left;
   position: relative;
+  padding-top: 10px;
 }
 .nav-container {
   float: right;
   position: relative;
+  overflow: auto;
 }
 .nav-phone {
   font-size: 32px;
   color: @primary-color;
   float: right;
-  padding-right: 30px;
+  padding-top: 10px;
+  padding-right: 20px;
 }
 .nav-menu {
-  padding-top: 50px;
-  padding-right: 20px;
+  padding-top: 60px;
+  padding-right: 10px;
   color: @primary-color;
 }
 .nav-menu-item {
@@ -33,4 +37,27 @@ header {
 }
 .btn.btn-default {
   color: @primary-color;
+  background-color: @primary-bg;
+  border-width: 0;
+}
+.btn-default:hover {
+  background-color: @secondary-active-color;
+  color: @primary-color;
+}
+.hidden-xs-minus {
+  display: none;
+}
+.hidden-xs-plus {
+  display: block;
+}
+@media (min-width: 560px) {
+  .hidden-xs-minus {
+    display: block;
+  }
+  .hidden-xs-plus {
+    display: none;
+  }
+  .brand {
+    padding-top: 0;
+  }
 }

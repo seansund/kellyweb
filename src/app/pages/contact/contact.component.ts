@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { Contact } from "../../models/Contact";
+import { Contact } from "../../models/LegalIssue";
 
 import {State} from "../../models/State";
 import {StateService} from "../../services/state.service";
@@ -19,7 +19,7 @@ export class ContactComponent implements OnInit {
   stateControl: FormControl;
   zipControl: FormControl;
   phoneControl: FormControl;
-  descriptionControl: FormControl;
+  legalIssueControl: FormControl;
 
   constructor(private stateService: StateService) { }
 
@@ -53,7 +53,7 @@ export class ContactComponent implements OnInit {
           Validators.pattern('[0-9]{10}')
         ], updateOn: "change"
       }),
-      'description': this.descriptionControl = new FormControl('', {
+      "legalIssue": this.legalIssueControl = new FormControl('', {
         validators: Validators.required,
         updateOn: "change"
       }),

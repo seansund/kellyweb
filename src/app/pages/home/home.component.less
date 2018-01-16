@@ -5,14 +5,25 @@
   background-image: url('/assets/banner.png');
   background-repeat: no-repeat;
   background-color: #d1c6c2;
-  height: 300px;
+  height: 200px;
 }
 .banner-box {
-  float: left;
-  padding-top: 75px;
-  padding-left: 40px;
   text-align: center;
+  padding-top: 25px;
 }
+@media (min-width: 560px) {
+  .banner-box {
+    float: left;
+    padding-top: 75px;
+    padding-left: 40px;
+  }
+  .banner {
+    overflow: auto;
+    background-image: url('/assets/banner.png');
+    background-repeat: no-repeat;
+    background-color: #d1c6c2;
+    height: 300px;
+  }}
 .btn-default {
   background-color: @secondary-bg;
   color: @secondary-color;

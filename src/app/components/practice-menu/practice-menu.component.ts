@@ -25,9 +25,9 @@ export class PracticeMenuComponent implements OnInit {
       {label: 'Modifications', link: '/modifications', icon: 'glyphicon glyphicon-pencil'},
       {label: 'Enforcement', link: '/enforcement', icon: 'glyphicon glyphicon-usd'},
       {label: 'Adoption', link: '/adoption', icon: 'glyphicon glyphicon-plus'},
-      {label: 'Guardianship', link: '/guardianship', icon: 'glyphicon glyphicon-plus'},
-      {label: 'Probate', link: '/probate', icon: 'glyphicon glyphicon-plus'},
-      {label: 'Wills & Trusts', link: '/wills-trusts', icon: 'glyphicon glyphicon-plus'}
+      {label: 'Guardianship', link: '/guardianship', icon: 'glyphicon glyphicon-user'},
+      {label: 'Probate', link: '/probate', icon: 'glyphicon glyphicon-tag'},
+      {label: 'Wills & Trusts', link: '/wills-trusts', icon: 'glyphicon glyphicon-list-alt'}
     ];
   }
 

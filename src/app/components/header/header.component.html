@@ -1,10 +1,29 @@
 <header>
-  <div class="brand"><a routerLink="home"><img src="./assets/logo1_black.png"/></a></div>
+  <div class="brand"><a routerLink="home"><img class="hidden-xs-minus"
+      src="./assets/logo1_black.png"/><img class="hidden-xs-plus hidden-md hidden-sm hidden-lg"
+      src="./assets/logo1_black_small.png"/></a></div>
   <div class="nav-container">
     <div class="nav-phone">512-246-3995</div>
-    <nav class="nav-menu" role="navigation">
+    <nav class="nav-menu hidden-xs-minus" role="navigation">
       <a *ngFor="let item of navItems" class="btn btn-default" routerLinkActive="is-active"
          routerLink="{{item.link}}">{{item.label}}</a>
     </nav>
+  </div>
+  <div class="hidden-xs-plus hidden-md hidden-sm hidden-lg text-center" style="width: 100%; overflow: auto;">
+    <!--
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let item of mobileNavItems" class="col-xs-3">
+          <button type="button" class="btn btn-default" routerLinkActive="is-active"
+              routerLink="{{item.link}}"><div class="{{item.icon}}"
+              aria-hidden="true"></div><div style="font-size: x-small;">{{item.label}}</div></button>
+        </div>
+      </div>
+    </div>
+    -->
+    <div class="btn-group-lg" style="width: 100%;" role="toolbar" aria-label="buttons">
+      <button *ngFor="let item of mobileNavItems" type="button" class="btn btn-default" routerLinkActive="is-active"
+         routerLink="{{item.link}}"><div class="{{item.icon}}" aria-hidden="true"></div><div style="font-size: x-small;">{{item.label}}</div></button>
+    </div>
   </div>
 </header>
