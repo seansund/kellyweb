@@ -29,7 +29,7 @@ export class MiniContactComponent implements OnInit {
       'emailAddress': this.emailControl = new FormControl('', {
         validators: [
           Validators.required,
-          Validators.pattern("[^ @]*@[^ @]*")
+          Validators.email
         ], updateOn: "change"
       }),
       'phone': this.phoneControl = new FormControl('', {
@@ -39,12 +39,16 @@ export class MiniContactComponent implements OnInit {
         ], updateOn: "change"
       }),
       "legalIssue": this.legalIssueControl = new FormControl('', {
-        validators: Validators.required,
-        updateOn: "change"
+        validators: [
+          Validators.required,
+          Validators.minLength(2)
+        ], updateOn: "change"
       }),
       'disclaimer': this.disclaimerControl = new FormControl(null,{
-        validators: Validators.required,
-        updateOn: "change"
+        validators: [
+          Validators.required,
+          Validators.requiredTrue
+        ], updateOn: "change"
       })
     });
   }

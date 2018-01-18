@@ -5,17 +5,17 @@
   <form [formGroup]="contactForm" (submit)="submit()" novalidate>
     <div class="container-fluid">
       <div class="row justify-content-md-center">
-        <div class="col-md-6">
+        <div class="col-md-6 col-md-offset-3">
           <div *ngIf="formError" class="alert alert-danger" role="alert">
-            <div *ngIf="disclaimerControl.invalid && !disclaimerControl.value">Disclaimer required</div>
+            <div *ngIf="disclaimerControl.invalid">Disclaimer required</div>
             <div *ngIf="emailControl.invalid">Email required</div>
             <div *ngIf="phoneControl.invalid">Phone required</div>
-            <div *ngIf="disclaimerControl.invalid">Description of legal issue required</div>
+            <div *ngIf="legalIssueControl.invalid">Description of legal issue required</div>
           </div>
         </div>
       </div>
       <div class="row justify-content-md-center">
-    <div class="col-md-3">
+    <div class="col-md-3 col-md-offset-3">
       <fieldset>
         <div [ngClass]="{
     'has-danger': nameControl.invalid && nameControl.dirty,
@@ -43,7 +43,9 @@
     </div>
     <div class="col-md-3">
       <fieldset>
-        <div>
+        <div [ngClass]="{
+    'has-danger': legalIssueControl.invalid && legalIssueControl.dirty,
+    'has-success': legalIssueControl.valid && legalIssueControl.dirty}">
           <label><span [ngClass]="{'hidden': !legalIssueControl.value, 'shown': !!legalIssueControl.value}">Brief description of your legal issue</span>
             <textarea class="form-control" formControlName="legalIssue" placeholder="Brief description of your legal issue" rows="7"></textarea>
           </label>
