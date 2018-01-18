@@ -1,11 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {FormsModule} from "@angular/forms";
+import { FormsModule } from "@angular/forms";
 import { ReactiveFormsModule } from '@angular/forms';
 
-import {AgmCoreModule} from "@agm/core";
+import { AgmCoreModule } from "@agm/core";
 
-import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
@@ -19,6 +19,7 @@ import { FirmOverviewComponent } from './pages/firm-overview/firm-overview.compo
 import { PracticeMenuComponent } from './components/practice-menu/practice-menu.component';
 import { PracticeAreasComponent } from './pages/practice-areas/practice-areas.component';
 
+import { WindowRef } from "./util/WindowRef";
 import { StateService } from "./services/state.service";
 import { MiniContactComponent } from './components/mini-contact/mini-contact.component';
 
@@ -47,7 +48,7 @@ import { MiniContactComponent } from './components/mini-contact/mini-contact.com
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [StateService],
+  providers: [StateService, WindowRef],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

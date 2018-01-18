@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
+import {WindowRef} from "../../util/WindowRef";
 
 class NavItem {
   link: string;
@@ -13,9 +14,9 @@ class NavItem {
 })
 export class HeaderComponent implements OnInit {
   navItems: NavItem[];
-  mobileNavItems: NavItem[];
+  navbarClass: string;
 
-  constructor() { }
+  constructor(private windowRef: WindowRef) { }
 
   ngOnInit() {
     this.navItems = [
@@ -25,8 +26,17 @@ export class HeaderComponent implements OnInit {
       {link: '/staff', label: 'Staff', icon: 'glyphicon glyphicon-user'},
       {link: '/contact', label: 'Contact Us', icon: 'glyphicon glyphicon-earphone'}
     ];
-    this.mobileNavItems = this.navItems.slice(1);
+    this.navbarClass = "";
   }
 
+  @HostListener("window:scroll", [])
+  onWindowScroll(e: any) {
+    console.log("Scrolling! " + this.windowRef.nativeWindow.scrollX + ", " + this.windowRef.nativeWindow.scrollY);
+    if (this.windowRef.nativeWindow.scrollY < 60) {
+      this.navbarClass = "";
+    } else if (this.navbarClass !== "fixed-to-top") {
+      this.navbarClass = "fixed-to-top";
+    }
+  }
 }
 
