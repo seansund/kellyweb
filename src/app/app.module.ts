@@ -21,6 +21,7 @@ import { PracticeAreasComponent } from './pages/practice-areas/practice-areas.co
 
 import { WindowRef } from "./util/WindowRef";
 import { StateService } from "./services/state.service";
+import { ContactService } from "./services/contact.service";
 import { MiniContactComponent } from './components/mini-contact/mini-contact.component';
 
 
@@ -48,7 +49,7 @@ import { MiniContactComponent } from './components/mini-contact/mini-contact.com
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [StateService, WindowRef],
+  providers: [StateService, ContactService, WindowRef],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {FormControl, FormGroup, Validators} from "@angular/forms";
 import {Contact} from "../../models/LegalIssue";
+import {ContactService} from "../../services/contact.service";
 
 @Component({
   selector: 'app-mini-contact',
@@ -16,7 +17,7 @@ export class MiniContactComponent implements OnInit {
   disclaimerControl: FormControl;
   formError: boolean;
 
-  constructor() { }
+  constructor(private service: ContactService) { }
 
   ngOnInit() {
     this.formError = false;
@@ -58,7 +59,15 @@ export class MiniContactComponent implements OnInit {
 
     if (this.contactForm.valid) {
       let contact: Contact = this.contactForm.value;
-      console.log('Contact info:', contact);
+
+      this.service.submitLegalIssue(contact).subscribe(next => {
+        console.log("next", next);
+      }, error => {
+        console.error("Error", error);
+      }, () => {
+        console.log("Complete");
+      });
+
     } else {
       // display error
       this.formError = true;
