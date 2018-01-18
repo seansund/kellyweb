@@ -14,7 +14,6 @@ export class AppComponent {
 
   @HostListener("window:scroll", [])
   onWindowScroll(e: any) {
-    console.log("Scrolling! " + this.windowRef.nativeWindow.scrollX + ", " + this.windowRef.nativeWindow.scrollY);
     if (this.windowRef.nativeWindow.scrollY < 60) {
       this.navMargin = "";
     } else if (this.navMargin !== "fixed-to-top-margin") {

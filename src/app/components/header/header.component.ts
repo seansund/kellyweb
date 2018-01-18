@@ -31,7 +31,6 @@ export class HeaderComponent implements OnInit {
 
   @HostListener("window:scroll", [])
   onWindowScroll(e: any) {
-    console.log("Scrolling! " + this.windowRef.nativeWindow.scrollX + ", " + this.windowRef.nativeWindow.scrollY);
     if (this.windowRef.nativeWindow.scrollY < 60) {
       this.navbarClass = "";
     } else if (this.navbarClass !== "fixed-to-top") {
